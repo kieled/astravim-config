@@ -5,21 +5,30 @@ return {
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+        "  ██████  ██░ ██  ██▓▄▄▄█████▓",
+        "▒██    ▒ ▓██░ ██▒▓██▒▓  ██▒ ▓▒",
+        "░ ▓██▄   ▒██▀▀██░▒██▒▒ ▓██░ ▒░",
+        "  ▒   ██▒░▓█ ░██ ░██░░ ▓██▓ ░ ",
+        "▒██████▒▒░▓█▒░██▓░██░  ▒██▒ ░ ",
+        "▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒░▓    ▒ ░░   ",
+        "░ ░▒  ░ ░ ▒ ░▒░ ░ ▒ ░    ░    ",
+        "░  ░  ░   ░  ░░ ░ ▒ ░  ░      ",
+        "      ░   ░  ░  ░ ░           "
       }
       return opts
     end,
   },
+  {
+    "NvChad/nvim-colorized.lua", enabled = false
+  },
+  {
+    "brenoprata10/nvim-highlight-colors",
+    config = function()
+      require("nvim-highlight-colors").setup {
+        enable_tailwind = true
+      }
+    end
+  }
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
